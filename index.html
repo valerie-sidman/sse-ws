@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="header">Chat</h1>
+  <section class="welcome-content">
+    <form class="welcome-form">
+      <label for="nickname-field" class="nickname-hint">Put your nickname here</label>
+      <input type="text" id="nickname-field" class="field-for-nickname field" required>
+      <input type="submit" class="enter-btn button" value="Enter">
+      <div class="existing-user inactive">User with this nickname already exists. Please come up with another nickname.</div>
+    </form>
+  </section>
+  <!-- Этот контент появляется только после корректной авторизации пользователя путем удаления класса inactive -->
+  <section class="authorized-content inactive">
+    <div class="status">Welcome to CHAT!</div>
+    <div class="main-section">
+      <div class="room">
+        <h2 class="room-header">In the room:</h2>
+        <ul class="guest-list">
+          <!-- Сюда добавляются новые guests -->
+        </ul>
+      </div>
+      <div class="chat">
+        <h2 class="chat-header">Let's chat here</h2>
+        <div class="chat-space">
+          <div class="chat-screen">
+            <ul class="messages-list">
+              <!-- Сюда добавляются новые messages -->
+            </ul>
+          </div>
+          <div class="typing-group">
+            <div class="typing-field-wrap">
+              <label for="typing-field" class="typing-hint">Type your message here: </label>
+              <input type="text" id="typing-field" class="field-for-message field">
+            </div>
+            <button class="sending-message-btn button">&#11014</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Конец контента, появившегося после авторизации -->
+
+</body>
+
+</html>
