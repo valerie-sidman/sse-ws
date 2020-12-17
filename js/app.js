@@ -10,7 +10,7 @@ const messagesList = document.querySelector('.messages-list');
 const messageField = document.querySelector('.field-for-message');
 const sendBtn = document.querySelector('.sending-message-btn');
 
-const ws = new WebSocket('ws://valerie-sidman-ws-server.herokuapp.com');
+const ws = new WebSocket('wss://valerie-sidman-ws-server.herokuapp.com');
 
 function sendData(method, nickname, message, date) {
   const data = {
